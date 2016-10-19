@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	function fibo(i) {
+		if (i == 0) {
+			return 0;
+		}
+		if (i == 1) {
+			return 1;
+		}
+		return fibo(i - 1) + fibo(i - 2);
+	}
+
+	for(;;) // Body of the programm;
+	{
+	
+		var x = parseInt(prompt("Введите количество чисел Фибоначчи:"));
+	
+		var fibo_nums = [];
+		for (i = 0; i < x; i++) {
+			fibo_nums[i] = fibo(i);
+		}
+	
+		var fibo_str = "";
+		for (i = 0; i < x; i++) {
+			fibo_str = fibo_str + fibo_nums[i];
+			if (i != x - 1) 
+			{
+				fibo_str = fibo_str + " ";
+			} else
+			{
+				fibo_str = fibo_str + ".";
+			}
+		}
+	
+		alert(x + " чисел Фибоначчи: " + fibo_str);
+		
+		if(!confirm("Повторить?"))
+		{
+			break;	
+		}
+	}
+	
+</script>
